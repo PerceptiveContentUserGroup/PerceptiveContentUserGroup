@@ -1,3 +1,6 @@
+/* 
+Gives count of annoations by Annotation Name, Drawer and Document type.
+*/
 SELECT DISTINCT dwr.DRAWER_NAME, dt.DOC_TYPE_NAME, t.TEMPL_NAME, COUNT(DISTINCT subob.SUBOB_ID) as annotation_count
 FROM inuser.IN_DOC doc
 INNER JOIN inuser.IN_DRAWER dwr on dwr.DRAWER_ID = doc.DRAWER_ID
