@@ -2,10 +2,9 @@
 Perceptive Content Active User List with NO Group Membership
 Last Updated: 8/22/2019
 
+This is specific to MS SQL databases and will not work on Oracle or Postgres
 NOTES: Filters out the following users:
 	- Manager/owner users
-	- OFA TransForm Service Account (inIntegrationtSvc)
-	- Invalid Accounts (New User and LNAME, FNAME)
 */
 
 --create temp working table for group access listing
