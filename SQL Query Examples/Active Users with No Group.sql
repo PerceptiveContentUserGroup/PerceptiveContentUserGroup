@@ -41,10 +41,4 @@ left join (
 			on data.sgm_usr_id = scu.usr_id
 where IS_ACTIVE = 1 and IS_DELETED = 0 and usr_cat = 0 and data.groups is null
 	and scu.usr_id NOT IN (SELECT entity_id FROM inuser.in_sc_priv WHERE priv_id IN (2501,6500)) -- 2501 is the manager privilege, 6500 is owner privilege
-	and usr_name NOT IN ('inIntegrationtSvc') -- How to capture this programmatically?
-	and scu.usr_id NOT IN (
-		'301YX19_005D6VWMY0018K2', -- New User
-		'301YW7L_004HXSG9Z00019T', -- LNAME, FNAME
-		'321Z4B5_075BS8VW0000HFE'  -- USR_LAST_NAME, USR_FIRST_NAME
-	)
 order by usr_last_name,usr_first_name
